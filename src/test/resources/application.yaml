@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: database_embedded_mongodb
+
+spring-boot-webflux-jwttemplate:
+  authentication: embedded
+  time:
+    current-time:
+      #fixed: true
+      zone: Europe/Warsaw
+      #date: 2018-05-21
+      #time: "11:01:00.000"
+  password:
+    encoder:
+      secret: mysecret
+      iteration: 33
+      keylength: 256
+  jjwt:
+    secret: JWTSecretForJwtTemplate
+    expirationTime: 28800
